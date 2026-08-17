@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Mateo Nutriquest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">MATEO NUTRIQUEST</span>
+        <h1>Tu misión de hoy 🌱</h1>
+      </div>
+      <div class="avatar">M</div>
+    </header>
+
+    <main>
+      <section class="hero card">
+        <div>
+          <p class="muted">Progreso diario</p>
+          <div class="progress-row"><strong id="progressText">0%</strong><span>de tu meta</span></div>
+          <div class="progress"><span id="progressBar"></span></div>
+          <p id="motivation">Completa tus hábitos para avanzar en tu quest.</p>
+        </div>
+        <div class="quest-badge">⭐ <span id="points">0</span> XP</div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="card stat"><span>💧</span><strong id="waterValue">0 / 8</strong><small>vasos de agua</small><button data-action="water">+1 vaso</button></article>
+        <article class="card stat"><span>🥗</span><strong id="mealValue">0 / 3</strong><small>comidas registradas</small><button data-action="meal">+ comida</button></article>
+        <article class="card stat"><span>🏃</span><strong id="activityValue">0 / 30</strong><small>min de actividad</small><button data-action="activity">+10 min</button></article>
+      </section>
+
+      <section class="card">
+        <div class="section-title"><div><p class="muted">Tu recorrido</p><h2>Hábitos de hoy</h2></div><span id="completedCount">0/5</span></div>
+        <div id="habitList" class="habit-list"></div>
+      </section>
+
+      <section class="card tip">
+        <span class="tip-icon">💡</span>
+        <div><strong>Reto de hoy</strong><p>Elige agua como bebida principal y añade una fruta o verdura a tu próxima comida.</p></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="active">🏠<span>Inicio</span></button>
+      <button>🎯<span>Metas</span></button>
+      <button>📊<span>Progreso</span></button>
+      <button>👤<span>Perfil</span></button>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
